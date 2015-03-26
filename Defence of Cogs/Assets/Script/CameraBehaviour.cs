@@ -17,7 +17,7 @@ public class CameraBehaviour : MonoBehaviour {
 			z += Input.GetAxisRaw ("Vertical") * 0.2f;
 			x += Input.GetAxisRaw ("Horizontal") * 0.2f;
 
-		transform.position = new Vector3(x, 10, z);
+		transform.position = new Vector3(x, 20, z);
 	
 	}
 }
