@@ -6,6 +6,8 @@ public class MousePosRaycastTes : MonoBehaviour {
 	public Camera mainCamera;
 	public GameObject tower;
 
+	public float towersInInventory = 10f;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -14,7 +16,7 @@ public class MousePosRaycastTes : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if(Input.GetButtonDown("Fire1"))
+		if(Input.GetButtonDown("Fire1") && towersInInventory > 0)
 		{
 			RaycastHit rHit = new RaycastHit();
 			Ray rRay = mainCamera.ScreenPointToRay(Input.mousePosition);
@@ -23,6 +25,8 @@ public class MousePosRaycastTes : MonoBehaviour {
 				Debug.Log("Got a hit!");
 				GameObject instance = Instantiate(tower);
 				instance.transform.position = rHit.point;
+				towersInInventory -= 1;
+				//instance.transform.position.y += 6;
 				//Screen.showCursor
 			}
 
