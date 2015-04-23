@@ -21,4 +21,8 @@ public class ProjectileBehaviour : MonoBehaviour {
 			transform.position += targetForward * 25f * Time.deltaTime;
 		}
 	}
+	void OnTriggerEnter (Collider other)
+	{
+		Destroy (this);
+	}
 }
