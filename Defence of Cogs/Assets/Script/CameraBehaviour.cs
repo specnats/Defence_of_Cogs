@@ -7,7 +7,9 @@ public class CameraBehaviour : MonoBehaviour {
 	public float z = 0f;
 	public float y = 20f;
 
-	private float translationSpeed = 5f;
+	public float translationSpeed = 10f;
+	public float zoomSpeed = 7f;
+
 
 	// Use this for initialization
 	void Start () {
@@ -18,9 +20,9 @@ public class CameraBehaviour : MonoBehaviour {
 	void Update () {
 		
 		//fix this so it will move according to x rotation so we can have rotation with the camera too and produce interesting and noy boring camrera angles.	
-		float verticalMovement = Input.GetAxisRaw ("Vertical") * 7f;
-		float horizontalMovement = Input.GetAxisRaw ("Horizontal") *7f;
-		float cameraZoomChange = Input.GetAxisRaw ("CameraY") * 5f;
+		float verticalMovement = Input.GetAxisRaw ("Vertical") * translationSpeed;
+		float horizontalMovement = Input.GetAxisRaw ("Horizontal") * translationSpeed;
+		float cameraZoomChange = Input.GetAxisRaw ("CameraY") * zoomSpeed;
 
 		//z += verticalMovement;
 		//x += horizontalMovement;
