@@ -1,10 +1,12 @@
 fileFormatVersion: 2
 guid: 22254af397cc25c49ab42c2b99f952af
-timeCreated: 1429198481
+timeCreated: 1431010223
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - mainCamera: {instanceID: 0}
+  - tower: {fileID: 100016, guid: cd52d937827d1cb4799218a33f1a55bd, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
